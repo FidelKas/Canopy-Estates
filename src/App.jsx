@@ -12,7 +12,9 @@ import { company, navLinks } from './data'
 export default function App() {
   const [page, setPage] = useState('home')
 
-  useEffect(() => window.scrollTo(0, 0), [page])
+  useEffect(() => {
+  window.scrollTo(0, 0)
+}, [page])
 
   const pages = {
     home: <Home onNavigate={setPage} />,
